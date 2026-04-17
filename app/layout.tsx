@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Guía de Estructura Web | Análisis de Componentes',
+  title: 'Propuesta de Estructura Web | Demo de Arquitectura',
   description:
-    'Un sitio educativo que desglosa cada sección de una landing page moderna, explicando su función y arquitectura técnica.',
-  keywords: ['estructura web', 'diseño de interfaces', 'next.js', 'componentes react', 'educación técnica'],
+    'Visualización detallada de la organización y diseño estructural de una landing page moderna para revisión del cliente.',
+  keywords: ['arquitectura web', 'diseño para clientes', 'maquetación funcional', 'propuesta de diseño'],
   openGraph: {
-    title: 'Guía de Estructura Web',
-    description: 'Aprende cómo se construye una landing page profesional sección por sección.',
+    title: 'Propuesta de Estructura Web',
+    description: 'Explore cómo organizamos la información y la experiencia del usuario en su futuro sitio.',
     type: 'website',
   },
 };
