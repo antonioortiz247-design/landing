@@ -29,27 +29,27 @@ const projects = [
 
 const values = [
   {
-    title: 'Estrategia que vende',
-    description: 'Diseño sistemas de ofertas y contenidos que conectan los puntos de dolor de la audiencia con resultados claros.',
+    title: 'Componentes Reutilizables',
+    description: 'Diseñados para ser modulares, permitiendo una consistencia visual en todo el sitio y facilitando el mantenimiento del código.',
     icon: <Lightbulb className="h-5 w-5" aria-hidden="true" />,
   },
   {
-    title: 'Construye con rapidez',
-    description: 'Me enfoco en la ejecución práctica para que los creadores puedan probar ideas rápidamente y lanzar con confianza.',
+    title: 'Secciones Animadas',
+    description: 'Utiliza Framer Motion para entradas suaves, lo que guía la atención del usuario mientras navega por el contenido.',
     icon: <Rocket className="h-5 w-5" aria-hidden="true" />,
   },
   {
-    title: 'Mide lo que importa',
-    description: 'Rastreo señales de crecimiento y métricas de producto para mejorar la conversión, retención y el compromiso.',
+    title: 'Diseño Adaptable',
+    description: 'Cada parte del sitio está optimizada para verse perfectamente en dispositivos móviles, tablets y computadoras de escritorio.',
     icon: <BarChart3 className="h-5 w-5" aria-hidden="true" />,
   },
 ];
 
 const stats = [
-  { label: 'Seguidores', value: '100K+' },
-  { label: 'Vistas de Contenido', value: '1M+' },
-  { label: 'Productos Lanzados', value: '45+' },
-  { label: 'Satisfacción del Cliente', value: '98%' },
+  { label: 'Tiempo de Carga', value: '< 1s' },
+  { label: 'Puntuación SEO', value: '100/100' },
+  { label: 'Accesibilidad', value: 'AA+' },
+  { label: 'Tasa de Conversión', value: 'Optimizado' },
 ];
 
 export default function HomePage() {
@@ -57,12 +57,12 @@ export default function HomePage() {
     <main>
       <AnimatedSection id="hero" className="section-shell flex min-h-screen items-center">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Estratega de Productos para Creadores</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Cabecera de la Página (Hero Section)</p>
           <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-900 md:text-7xl">
-            Ayudo a creadores a construir productos digitales
+            La puerta de entrada a tu sitio web
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600">
-            Me asocio con creadores para dar forma a sus ideas, crear experiencias premium y convertir la confianza de la audiencia en productos digitales escalables.
+            Esta sección (Hero) es el primer contacto del usuario. Su función es comunicar de inmediato la propuesta de valor y guiar hacia las acciones principales del sitio.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -75,7 +75,7 @@ export default function HomePage() {
               href="#contact"
               className="rounded-full border border-zinc-300 bg-white px-6 py-3 text-sm font-medium text-zinc-900 transition hover:border-zinc-400"
             >
-              Reservar una llamada
+              Ir a conversión
             </Link>
           </div>
         </div>
@@ -85,11 +85,11 @@ export default function HomePage() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <SectionHeader
-              title="Sobre mí"
-              subtitle="Soy un creador con mentalidad de producto enfocado en construir sistemas simples que ayudan a las personas a lanzar, crecer y monetizar ideas digitales sin complejidad innecesaria."
+              title="Sección de Introducción"
+              subtitle="Aquí se profundiza en la narrativa del sitio, proporcionando contexto adicional que genera confianza y establece una conexión con el visitante."
             />
             <p className="mt-6 text-base leading-relaxed text-zinc-600">
-              En los últimos años, he trabajado con creadores, coaches y educadores para convertir su experiencia en productos limpios y de alta conversión. Mi enfoque combina estrategia, storytelling y ejecución.
+              Esta parte utiliza una cuadrícula (grid) para combinar texto persuasivo con elementos visuales, logrando un equilibrio entre información y diseño moderno.
             </p>
           </div>
           <div className="card p-3">
@@ -107,8 +107,8 @@ export default function HomePage() {
 
       <AnimatedSection id="projects" className="section-shell border-t border-zinc-200">
         <SectionHeader
-          title="Estructura del Sitio"
-          subtitle="Una descripción técnica de los pilares que sostienen esta arquitectura web."
+          title="Arquitectura de Información"
+          subtitle="Cada bloque está estructurado para presentar datos complejos de manera digerible mediante tarjetas modulares y jerarquías claras."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
@@ -119,8 +119,8 @@ export default function HomePage() {
 
       <AnimatedSection id="value" className="section-shell border-t border-zinc-200">
         <SectionHeader
-          title="Cómo aporto valor"
-          subtitle="Ayudo a los creadores a simplificar la creación de productos para que cada acción impulse el crecimiento de la marca a largo plazo."
+          title="Elementos de Valor (Features)"
+          subtitle="Se utilizan para destacar los beneficios clave o características técnicas, empleando iconos y descripciones breves de alto impacto."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {values.map((item) => (
@@ -130,7 +130,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection id="social-proof" className="section-shell border-t border-zinc-200">
-        <SectionHeader title="Prueba social" subtitle="Con la confianza de una audiencia creciente y negocios liderados por creadores." />
+        <SectionHeader title="Sección de Datos y Credibilidad" subtitle="Muestra métricas reales para validar la autoridad y el éxito del proyecto ante los ojos del visitante." />
         <dl className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="card text-center">
@@ -144,8 +144,8 @@ export default function HomePage() {
       <AnimatedSection id="contact" className="section-shell border-t border-zinc-200">
         <div className="card mx-auto max-w-2xl text-center">
           <SectionHeader
-            title="Construyamos tu próximo producto digital"
-            subtitle="Recibe información ocasional y manuales de lanzamiento directamente en tu bandeja de entrada."
+            title="Sección de Conversión (Call to Action)"
+            subtitle="El objetivo final del sitio: capturar el interés del usuario mediante un formulario de suscripción o un botón de contacto directo."
           />
           <form className="mt-8 flex flex-col gap-3 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
             <label htmlFor="email" className="sr-only">
@@ -163,7 +163,7 @@ export default function HomePage() {
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-white transition hover:bg-violet-700"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
-              Unirse al boletín
+              Acción principal
             </button>
           </form>
         </div>
@@ -172,28 +172,28 @@ export default function HomePage() {
       <footer className="border-t border-zinc-200">
         <div className="section-shell flex flex-col items-start justify-between gap-8 py-10 md:flex-row md:items-center">
           <div>
-            <p className="text-lg font-semibold tracking-tight">Demo Marca Personal</p>
-            <p className="mt-1 text-sm text-zinc-500">© {new Date().getFullYear()} Todos los derechos reservados.</p>
+            <p className="text-lg font-semibold tracking-tight">Pie de Página (Footer)</p>
+            <p className="mt-1 text-sm text-zinc-500">© {new Date().getFullYear()} Información global y legal.</p>
           </div>
           <nav aria-label="Enlaces del pie de página" className="flex flex-wrap items-center gap-6 text-sm text-zinc-600">
             <Link href="#about" className="hover:text-zinc-900">
-              Sobre mí
+              Introducción
             </Link>
             <Link href="#projects" className="hover:text-zinc-900">
-              Estructura
+              Arquitectura
             </Link>
             <Link href="#contact" className="hover:text-zinc-900">
-              Contacto
+              Conversión
             </Link>
           </nav>
           <div className="flex items-center gap-3 text-zinc-600">
-            <Link href="#" aria-label="Twitter" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
+            <Link href="#" aria-label="Red Social 1" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
               <Twitter className="h-4 w-4" aria-hidden="true" />
             </Link>
-            <Link href="#" aria-label="LinkedIn" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
+            <Link href="#" aria-label="Red Social 2" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
               <Linkedin className="h-4 w-4" aria-hidden="true" />
             </Link>
-            <Link href="#" aria-label="GitHub" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
+            <Link href="#" aria-label="Red Social 3" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900">
               <Github className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>

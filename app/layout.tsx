@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Demo Marca Personal | Estratega de Productos para Creadores',
+  title: 'Guía de Estructura Web | Análisis de Componentes',
   description:
-    'Sitio web de demostración de marca personal que muestra hero, proyectos, propuesta de valor, prueba social y captura de clientes potenciales.',
-  keywords: ['marca personal', 'economía de creadores', 'productos digitales', 'demo de portafolio'],
+    'Un sitio educativo que desglosa cada sección de una landing page moderna, explicando su función y arquitectura técnica.',
+  keywords: ['estructura web', 'diseño de interfaces', 'next.js', 'componentes react', 'educación técnica'],
   openGraph: {
-    title: 'Demo Marca Personal',
-    description: 'Un sitio web de marca personal limpio y moderno construido con Next.js.',
+    title: 'Guía de Estructura Web',
+    description: 'Aprende cómo se construye una landing page profesional sección por sección.',
     type: 'website',
   },
 };
