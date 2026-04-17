@@ -57,6 +57,42 @@ export default function HomePage() {
   return (
     <main>
       <ThemeToggle />
+      
+      <div className="scroll">
+        <span>scroll</span>
+        <div className="divider"></div>
+      </div>
+
+      <header>
+        <div className="menu">
+          <label htmlFor="burger">
+            <input type="checkbox" id="burger" />
+            <svg className="burger" viewBox="0 0 100 100" width="40">
+              <path className="top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path className="middle" d="m 30,50 h 40" />
+              <path className="bottom" d="m 30,67 h 40 c 12.796276,0 15.393911,-15.173544 15.393911,-21.883993 0,-6.710449 -2.624242,-22.593232 -15.393911,-22.593232 h -40 v 40" />
+            </svg>
+          </label>
+        </div>
+        <nav>
+          <ul>
+            <li><Link href="#hero">Inicio</Link></li>
+            <li><Link href="#about">Concepto</Link></li>
+            <li><Link href="#projects">Contenido</Link></li>
+            <li><Link href="#contact">Contacto</Link></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section className="masthead" style={{ '--name': '--masthead-s' } as any}>
+        <div className="flying-squares">
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+        </div>
+        <h1>Estructura Web</h1>
+      </section>
+
       <AnimatedSection id="hero" className="section-shell flex min-h-screen items-center">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500 dark:text-zinc-400">Presentación de Estructura Web</p>
@@ -83,8 +119,11 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection id="about" className="section-shell border-t border-zinc-200 dark:border-zinc-800">
-        <div className="grid items-center gap-10 md:grid-cols-2">
+      <AnimatedSection id="about" className="section-shell border-t border-zinc-200 dark:border-zinc-800" style={{ '--name': '--text-s' } as any}>
+        <div className="read">
+          <div>Lectura: <span>Estructura Web</span></div>
+        </div>
+        <div className="grid items-center gap-10 md:grid-cols-2 text">
           <div>
             <SectionHeader
               title="Presentación de Concepto"
@@ -107,7 +146,14 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection id="projects" className="section-shell border-t border-zinc-200 dark:border-zinc-800">
+      <AnimatedSection id="projects" className="section-shell border-t border-zinc-200 dark:border-zinc-800" style={{ '--name': '--tiles-s' } as any}>
+        <div className="tile-section">
+          <div className="tile-container">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div key={i} className="tile"></div>
+            ))}
+          </div>
+        </div>
         <SectionHeader
           title="Organización del Contenido"
           subtitle="Desglosamos la arquitectura del sitio para que pueda visualizar cómo se distribuirá la información clave."
@@ -119,7 +165,24 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection id="value" className="section-shell border-t border-zinc-200 dark:border-zinc-800">
+      <AnimatedSection id="value" className="section-shell border-t border-zinc-200 dark:border-zinc-800" style={{ '--name': '--two-columns-s' } as any}>
+        <div className="two-columns">
+          <div className="content">
+            <div className="cards">
+              {values.map((item, idx) => (
+                <div key={item.title} className="card" style={{ '--range-start': `${10 + idx * 30}%` } as any}>
+                  <div className="inline-flex rounded-xl bg-zinc-100 p-3 text-accent dark:bg-zinc-800">{item.icon}</div>
+                  <h3 className="title text-lg font-semibold dark:text-zinc-100">{item.title}</h3>
+                  <p className="subtitle text-sm opacity-50">{item.title} - Detalle técnico</p>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{item.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="preview">
+              <div className="img"></div>
+            </div>
+          </div>
+        </div>
         <SectionHeader
           title="Pilares del Diseño"
           subtitle="Nuestra metodología se basa en tres principios fundamentales para garantizar el éxito de su presencia digital."
@@ -143,8 +206,8 @@ export default function HomePage() {
         </dl>
       </AnimatedSection>
 
-      <AnimatedSection id="contact" className="section-shell border-t border-zinc-200 dark:border-zinc-800">
-        <div className="card mx-auto max-w-2xl text-center">
+      <AnimatedSection id="contact" className="section-shell border-t border-zinc-200 dark:border-zinc-800" style={{ '--name': '--subscribe-s' } as any}>
+        <div className="subscribe">
           <SectionHeader
             title="Punto de Conversión"
             subtitle="Diseñamos flujos de contacto intuitivos que facilitan la comunicación entre usted y sus clientes potenciales."
@@ -164,42 +227,16 @@ export default function HomePage() {
               type="submit"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-white transition hover:bg-violet-700"
             >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              Botón de Acción
+              <span>Botón de Acción</span>
             </button>
           </form>
         </div>
       </AnimatedSection>
 
-      <footer className="border-t border-zinc-200 dark:border-zinc-800">
-        <div className="section-shell flex flex-col items-start justify-between gap-8 py-10 md:flex-row md:items-center">
-          <div>
-            <p className="text-lg font-semibold tracking-tight dark:text-zinc-100">Estructura de Cierre</p>
-            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">© {new Date().getFullYear()} Resumen de navegación y enlaces.</p>
-          </div>
-          <nav aria-label="Enlaces finales" className="flex flex-wrap items-center gap-6 text-sm text-zinc-600 dark:text-zinc-400">
-            <Link href="#about" className="hover:text-zinc-900 dark:hover:text-zinc-100">
-              Concepto
-            </Link>
-            <Link href="#projects" className="hover:text-zinc-900 dark:hover:text-zinc-100">
-              Contenido
-            </Link>
-            <Link href="#contact" className="hover:text-zinc-900 dark:hover:text-zinc-100">
-              Conversión
-            </Link>
-          </nav>
-          <div className="flex items-center gap-3 text-zinc-600 dark:text-zinc-400">
-            <Link href="#" aria-label="Enlace Social 1" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">
-              <Twitter className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link href="#" aria-label="Enlace Social 2" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">
-              <Linkedin className="h-4 w-4" aria-hidden="true" />
-            </Link>
-            <Link href="#" aria-label="Enlace Social 3" className="rounded-full p-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-100">
-              <Github className="h-4 w-4" aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
+      <footer>
+        <Link href="#hero">
+          <span>Volver al inicio</span>
+        </Link>
       </footer>
     </main>
   );
