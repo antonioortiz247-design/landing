@@ -11,25 +11,6 @@ import { ThemeToggle } from '@/components/theme-toggle';
 
 const projects = [
   {
-    title: 'Arquitectura App Router',
-    description: 'Utiliza el sistema de enrutamiento moderno de Next.js 14, donde cada carpeta en "app" define una ruta y los layouts manejan el estado compartido.',
-  },
-  {
-    title: 'Componentes Modulares',
-    description: 'La carpeta "components" contiene elementos de UI reutilizables como tarjetas, cabeceras y secciones animadas para mantener el código DRY.',
-  },
-  {
-    title: 'Estilos con Tailwind CSS',
-    description: 'Configuración optimizada en tailwind.config.ts y globals.css que permite un diseño responsivo y moderno mediante clases de utilidad.',
-  },
-  {
-    title: 'Animaciones de Interfaz',
-    description: 'Implementación de Framer Motion para entradas suaves y transiciones visuales que mejoran la experiencia del usuario al hacer scroll.',
-  },
-];
-
-const projects = [
-  {
     title: 'Arquitectura de Navegación',
     description: 'Sistema de rutas optimizado que permite una navegación fluida entre secciones, diseñado para guiar al usuario a través de su historia.',
   },
