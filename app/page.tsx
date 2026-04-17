@@ -10,46 +10,46 @@ import { ValueItem } from '@/components/value-item';
 
 const projects = [
   {
-    title: 'Creator Course Platform',
-    description: 'A premium learning experience that turned a niche audience into a recurring membership community.',
+    title: 'Arquitectura App Router',
+    description: 'Utiliza el sistema de enrutamiento moderno de Next.js 14, donde cada carpeta en "app" define una ruta y los layouts manejan el estado compartido.',
   },
   {
-    title: 'Newsletter Growth Sprint',
-    description: 'Content and funnel strategy that doubled subscriber growth in 90 days with lightweight automation.',
+    title: 'Componentes Modulares',
+    description: 'La carpeta "components" contiene elementos de UI reutilizables como tarjetas, cabeceras y secciones animadas para mantener el código DRY.',
   },
   {
-    title: 'Digital Product Launch',
-    description: 'Positioning, copy, and launch assets for a mini product that generated consistent monthly revenue.',
+    title: 'Estilos con Tailwind CSS',
+    description: 'Configuración optimizada en tailwind.config.ts y globals.css que permite un diseño responsivo y moderno mediante clases de utilidad.',
   },
   {
-    title: 'Brand System Refresh',
-    description: 'Refined visual language and messaging playbook to align content, offers, and audience expectations.',
+    title: 'Animaciones de Interfaz',
+    description: 'Implementación de Framer Motion para entradas suaves y transiciones visuales que mejoran la experiencia del usuario al hacer scroll.',
   },
 ];
 
 const values = [
   {
-    title: 'Strategy that sells',
-    description: 'I design offer and content systems that connect audience pain points with clear outcomes.',
+    title: 'Estrategia que vende',
+    description: 'Diseño sistemas de ofertas y contenidos que conectan los puntos de dolor de la audiencia con resultados claros.',
     icon: <Lightbulb className="h-5 w-5" aria-hidden="true" />,
   },
   {
-    title: 'Build for speed',
-    description: 'I focus on practical execution so creators can test ideas quickly and ship with confidence.',
+    title: 'Construye con rapidez',
+    description: 'Me enfoco en la ejecución práctica para que los creadores puedan probar ideas rápidamente y lanzar con confianza.',
     icon: <Rocket className="h-5 w-5" aria-hidden="true" />,
   },
   {
-    title: 'Measure what matters',
-    description: 'I track growth signals and product metrics to improve conversion, retention, and engagement.',
+    title: 'Mide lo que importa',
+    description: 'Rastreo señales de crecimiento y métricas de producto para mejorar la conversión, retención y el compromiso.',
     icon: <BarChart3 className="h-5 w-5" aria-hidden="true" />,
   },
 ];
 
 const stats = [
-  { label: 'Followers', value: '100K+' },
-  { label: 'Content Views', value: '1M+' },
-  { label: 'Products Launched', value: '45+' },
-  { label: 'Client Satisfaction', value: '98%' },
+  { label: 'Seguidores', value: '100K+' },
+  { label: 'Vistas de Contenido', value: '1M+' },
+  { label: 'Productos Lanzados', value: '45+' },
+  { label: 'Satisfacción del Cliente', value: '98%' },
 ];
 
 export default function HomePage() {
@@ -57,26 +57,25 @@ export default function HomePage() {
     <main>
       <AnimatedSection id="hero" className="section-shell flex min-h-screen items-center">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Creator Product Strategist</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-zinc-500">Estratega de Productos para Creadores</p>
           <h1 className="mt-6 text-5xl font-semibold tracking-tight text-zinc-900 md:text-7xl">
-            I help creators build digital products
+            Ayudo a creadores a construir productos digitales
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600">
-            I partner with creators to shape ideas, craft premium experiences, and turn audience trust into scalable
-            digital products.
+            Me asocio con creadores para dar forma a sus ideas, crear experiencias premium y convertir la confianza de la audiencia en productos digitales escalables.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="#projects"
               className="rounded-full bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
             >
-              See projects
+              Explorar estructura
             </Link>
             <Link
               href="#contact"
               className="rounded-full border border-zinc-300 bg-white px-6 py-3 text-sm font-medium text-zinc-900 transition hover:border-zinc-400"
             >
-              Book a call
+              Reservar una llamada
             </Link>
           </div>
         </div>
@@ -86,18 +85,17 @@ export default function HomePage() {
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <SectionHeader
-              title="About"
-              subtitle="I’m a product-minded creator focused on building simple systems that help people launch, grow, and monetize digital ideas without unnecessary complexity."
+              title="Sobre mí"
+              subtitle="Soy un creador con mentalidad de producto enfocado en construir sistemas simples que ayudan a las personas a lanzar, crecer y monetizar ideas digitales sin complejidad innecesaria."
             />
             <p className="mt-6 text-base leading-relaxed text-zinc-600">
-              Over the past few years, I’ve worked with creators, coaches, and educators to turn expertise into clean,
-              high-converting products. My approach combines strategy, storytelling, and execution.
+              En los últimos años, he trabajado con creadores, coaches y educadores para convertir su experiencia en productos limpios y de alta conversión. Mi enfoque combina estrategia, storytelling y ejecución.
             </p>
           </div>
           <div className="card p-3">
             <Image
               src="/profile-placeholder.svg"
-              alt="Portrait placeholder"
+              alt="Marcador de posición de retrato"
               width={640}
               height={800}
               className="h-auto w-full rounded-2xl"
@@ -109,8 +107,8 @@ export default function HomePage() {
 
       <AnimatedSection id="projects" className="section-shell border-t border-zinc-200">
         <SectionHeader
-          title="Projects"
-          subtitle="A few recent collaborations where strategy met design and execution."
+          title="Estructura del Sitio"
+          subtitle="Una descripción técnica de los pilares que sostienen esta arquitectura web."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
@@ -121,8 +119,8 @@ export default function HomePage() {
 
       <AnimatedSection id="value" className="section-shell border-t border-zinc-200">
         <SectionHeader
-          title="How I create value"
-          subtitle="I help creators simplify product building so every action compounds long-term brand growth."
+          title="Cómo aporto valor"
+          subtitle="Ayudo a los creadores a simplificar la creación de productos para que cada acción impulse el crecimiento de la marca a largo plazo."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {values.map((item) => (
@@ -132,7 +130,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection id="social-proof" className="section-shell border-t border-zinc-200">
-        <SectionHeader title="Social proof" subtitle="Trusted by a growing audience and creator-led businesses." />
+        <SectionHeader title="Prueba social" subtitle="Con la confianza de una audiencia creciente y negocios liderados por creadores." />
         <dl className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="card text-center">
@@ -146,18 +144,18 @@ export default function HomePage() {
       <AnimatedSection id="contact" className="section-shell border-t border-zinc-200">
         <div className="card mx-auto max-w-2xl text-center">
           <SectionHeader
-            title="Let’s build your next digital product"
-            subtitle="Get occasional insights and launch playbooks delivered to your inbox."
+            title="Construyamos tu próximo producto digital"
+            subtitle="Recibe información ocasional y manuales de lanzamiento directamente en tu bandeja de entrada."
           />
           <form className="mt-8 flex flex-col gap-3 sm:flex-row" onSubmit={(event) => event.preventDefault()}>
             <label htmlFor="email" className="sr-only">
-              Email address
+              Dirección de correo electrónico
             </label>
             <input
               id="email"
               type="email"
               required
-              placeholder="you@example.com"
+              placeholder="tu@ejemplo.com"
               className="h-12 flex-1 rounded-full border border-zinc-300 px-5 text-sm outline-none ring-accent transition focus:ring-2"
             />
             <button
@@ -165,7 +163,7 @@ export default function HomePage() {
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-white transition hover:bg-violet-700"
             >
               <Mail className="h-4 w-4" aria-hidden="true" />
-              Join newsletter
+              Unirse al boletín
             </button>
           </form>
         </div>
@@ -174,18 +172,18 @@ export default function HomePage() {
       <footer className="border-t border-zinc-200">
         <div className="section-shell flex flex-col items-start justify-between gap-8 py-10 md:flex-row md:items-center">
           <div>
-            <p className="text-lg font-semibold tracking-tight">Demo Personal Brand</p>
-            <p className="mt-1 text-sm text-zinc-500">© {new Date().getFullYear()} All rights reserved.</p>
+            <p className="text-lg font-semibold tracking-tight">Demo Marca Personal</p>
+            <p className="mt-1 text-sm text-zinc-500">© {new Date().getFullYear()} Todos los derechos reservados.</p>
           </div>
-          <nav aria-label="Footer links" className="flex flex-wrap items-center gap-6 text-sm text-zinc-600">
+          <nav aria-label="Enlaces del pie de página" className="flex flex-wrap items-center gap-6 text-sm text-zinc-600">
             <Link href="#about" className="hover:text-zinc-900">
-              About
+              Sobre mí
             </Link>
             <Link href="#projects" className="hover:text-zinc-900">
-              Projects
+              Estructura
             </Link>
             <Link href="#contact" className="hover:text-zinc-900">
-              Contact
+              Contacto
             </Link>
           </nav>
           <div className="flex items-center gap-3 text-zinc-600">
